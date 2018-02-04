@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Route, Router, CanLoad } from '@angular/router';
-import { AuthConstants } from '../constant/auth.constant';
+import { CanActivate, CanLoad, Router } from '@angular/router';
 
-import { SecurityService } from '../services/security.service';
+import { SecurityService } from '@app/services';
 
 @Injectable()
 export class LoginGuard implements CanActivate, CanLoad {
@@ -10,19 +9,16 @@ export class LoginGuard implements CanActivate, CanLoad {
   constructor(private securityService: SecurityService, private router: Router) {
   }
 
-  canLoad(route: Route): boolean {
+  canLoad(): boolean {
     return this.checkLogin();
   }
 
-  canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+  canActivate(): boolean {
     return this.checkLogin();
   }
 
   checkLogin(): boolean {
-    const isLogout = !!localStorage.getItem(AuthConstants.LOGOUT_ACTION_NAME);
-    localStorage.removeItem(AuthConstants.LOGOUT_ACTION_NAME);
-
-    if (isLogout || !this.securityService.isLoggedIn()) {
+    if (!this.securityService.isLoggedIn()) {
       return true;
     }
 

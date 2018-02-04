@@ -13,4 +13,5 @@ import { ConfigurationAuthLayoutComponent } from './configuration-auth-layout.co
     ConfigurationAuthLayoutComponent
   ]
 })
-export class ConfigurationAuthLayoutModule { }
+export class ConfigurationAuthLayoutModule {
+}

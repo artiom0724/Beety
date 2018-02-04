@@ -1,10 +1,7 @@
-import { Injectable, NgModule } from '@angular/core';
-import {
-  Routes, RouterModule, NavigationStart, Router, CanActivate, ActivatedRouteSnapshot,
-  RouterStateSnapshot
-} from '@angular/router';
-import { States } from './constant/states.constant';
-import { AuthGuard } from './guards/auth.guard';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { States } from '@app/constant';
+import { AuthGuard } from '@app/guards';
 
 const routes: Routes = [
   {
@@ -18,12 +15,8 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '',
+    redirectTo: States.LOGIN,
     pathMatch: 'full'
-  },
-  {
-    path: '**',
-    redirectTo: States.LOGIN
   }
 ];
 

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ConfigurationMainLayoutComponent } from './configuration-main-layout.component';
-import { States } from '../../../constant/states.constant';
+import { States } from '@app/constant';
 
 const configurationMainLayoutRoutes: Routes = [
   {
@@ -25,7 +25,7 @@ const configurationMainLayoutRoutes: Routes = [
   imports: [
     RouterModule.forChild(configurationMainLayoutRoutes)
   ],
-  exports: [ RouterModule ]
+  exports: [RouterModule]
 })
 export class ConfigurationMainLayoutRoutingModule {
 

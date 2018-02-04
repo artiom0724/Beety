@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
-import { AuthConstants } from '../constant/auth.constant';
+import { AuthConstants } from '@app/constant';
 
 @Injectable()
 export class SecurityService {
-
-  constructor() { }
 
   isLoggedIn() {
     return !!localStorage.getItem(AuthConstants.AUTH_TOKEN_NAME);

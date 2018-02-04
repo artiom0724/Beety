@@ -20,7 +20,7 @@ const configurationAuthLayoutRoutes: Routes = [
   imports: [
     RouterModule.forChild(configurationAuthLayoutRoutes)
   ],
-  exports: [ RouterModule ]
+  exports: [RouterModule]
 })
 export class ConfigurationAuthLayoutRoutingModule {
 
