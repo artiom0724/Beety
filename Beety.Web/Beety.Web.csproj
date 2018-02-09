@@ -12,4 +12,8 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Beety.Domain\Beety.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

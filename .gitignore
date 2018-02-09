@@ -2,3 +2,5 @@ Beety/obj/Debug/netcoreapp2.0/Beety.AssemblyInfo.cs
 .vs/
 Beety/obj/
 obj/
+/Beety.Web/bin/Debug/netcoreapp2.0
+/Beety.Domain/bin/Debug/netcoreapp2.0
