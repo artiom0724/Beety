@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AuthConstants } from '@app/constant';
+import { AuthConstants } from '../constant/auth.constant';
 
 @Injectable()
 export class SecurityService {
