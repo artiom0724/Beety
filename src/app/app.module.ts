@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GuardsModule } from '@app/guards';
-import { InterceptorsModule } from '@app/services';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ServicesModule } from '@app/services';
+import { GuardsModule } from './guards/guards.module';
+import { ServicesModule } from './services/services.module';
+import { InterceptorsModule } from './services/interceptor/interceptors.module';
 
 import 'hammerjs';
 import 'rxjs/add/operator/do';
