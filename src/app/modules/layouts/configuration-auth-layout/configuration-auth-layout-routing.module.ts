@@ -22,6 +22,6 @@ const configurationAuthLayoutRoutes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class ConfigurationAuthLayoutRoutingModule {
 
+export class ConfigurationAuthLayoutRoutingModule {
 }

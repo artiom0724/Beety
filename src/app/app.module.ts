@@ -30,5 +30,6 @@ import 'rxjs/add/observable/forkJoin';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {
 }

@@ -5,5 +5,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
   templateUrl: './configuration-auth-layout.component.html',
   encapsulation: ViewEncapsulation.None
 })
+
 export class ConfigurationAuthLayoutComponent {
 }

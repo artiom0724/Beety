@@ -9,7 +9,6 @@ import {
   MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
-//import { BootstrapGridModule } from 'ng2-bootstrap-grid/dist/out-tsc';
 
 @NgModule({
   imports: [
@@ -33,5 +32,6 @@ import {
     MatCheckboxModule
   ]
 })
+
 export class SharedModule {
 }

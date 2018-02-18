@@ -4,5 +4,6 @@ import { Component } from '@angular/core';
   selector: 't-page',
   templateUrl: './page.component.html'
 })
+
 export class PageComponent {
 }
