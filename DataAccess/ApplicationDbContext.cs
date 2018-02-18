@@ -14,15 +14,12 @@ namespace DataAccess
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
 
-        public DbSet<TestClass> TestClass { get; set; }
-
         public DbSet<RegistrationToken> RegistrationTokens { get; set; }
         #endregion DbSets
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-           
         }
     }
 }
