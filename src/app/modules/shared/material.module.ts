@@ -33,5 +33,5 @@ import {
   ]
 })
 
-export class SharedModule {
+export class MaterialModule {
 }
