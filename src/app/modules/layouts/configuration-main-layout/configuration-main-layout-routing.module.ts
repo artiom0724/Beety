@@ -11,11 +11,11 @@ const configurationMainLayoutRoutes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: '../../sections/page/page.module#StartPageModule',
+        loadChildren: '../../sections/page/page.module#PageModule',
       },
       {
-        path: States.START_PAGE,
-        loadChildren: '../../sections/page/page.module#StartPageModule',
+        path: States.Page,
+        loadChildren: '../../sections/page/page.module#PageModule',
       }
     ]
   }

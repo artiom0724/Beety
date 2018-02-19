@@ -13,7 +13,6 @@ import { StartPageModule } from '../../sections/start-page/start-page.module';
     ConfigurationAuthLayoutRoutingModule,
     AuthHeaderModule,
     AuthFooterModule,
-    StartPageModule,
   ],
   declarations: [
     ConfigurationAuthLayoutComponent,

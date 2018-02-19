@@ -10,7 +10,7 @@ const configurationAuthLayoutRoutes: Routes = [
     children: [
       {
         path: 'login',
-        loadChildren: '../../sections/login/login.module#LoginModule'
+        loadChildren: '../../sections/start-page/start-page.module#StartPageModule'
       }
     ]
   }

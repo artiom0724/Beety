@@ -6,7 +6,7 @@ import { StartPageComponent } from './start-page.component';
 import { LoginGuard } from '../../../guards/login.guard';
 
 const loginRoutes: Routes = [
-  {path: '', component: StartPageComponent, canActivate: [ LoginGuard ]}
+  {path: '', component: StartPageComponent}
 ];
 
 @NgModule({

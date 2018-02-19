@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { States } from '@app/constant';
 import { AuthGuard } from '@app/guards';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
   {
     path: States.AUTH,
-    loadChildren: './modules/layouts/configuration-auth-layout/configuration-auth-layout.module#ConfigurationAuthLayoutModule'
+    loadChildren: './modules/layouts/configuration-auth-layout/configuration-auth-layout.module#ConfigurationAuthLayoutModule',
+    canLoad: [ LoginGuard ],
+    canActivate: [ LoginGuard ],
   },
   {
     path: '',
@@ -15,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: States.LOGIN,
+    redirectTo: States.START_PAGE,
     pathMatch: 'full'
   }
 ];

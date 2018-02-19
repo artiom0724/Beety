@@ -1,9 +1,8 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 't-auth-footer',
   templateUrl: './auth-footer.component.html',
-  encapsulation: ViewEncapsulation.None
 })
 
 export class AuthFooterComponent {
