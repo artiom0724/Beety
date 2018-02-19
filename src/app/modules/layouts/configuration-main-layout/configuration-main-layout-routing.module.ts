@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ConfigurationMainLayoutComponent } from './configuration-main-layout.component';
-import { States } from '@app/constant';
+import { States } from '../../../constant/states.constant';
 
 const configurationMainLayoutRoutes: Routes = [
   {
@@ -14,7 +14,7 @@ const configurationMainLayoutRoutes: Routes = [
         loadChildren: '../../sections/page/page.module#PageModule',
       },
       {
-        path: States.Page,
+        path: States.PAGE,
         loadChildren: '../../sections/page/page.module#PageModule',
       }
     ]
