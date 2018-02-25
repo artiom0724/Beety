@@ -1,11 +1,12 @@
 export class States {
-  /* tslint:disable */
-
   // Authentication
   static readonly AUTH = 'auth';
-  static readonly LOGIN = 'auth/login';
+  static readonly START_PAGE = 'start-page';
 
+  // Organization
+  static readonly ORGANIZATION = 'organization';
+  static readonly CONTROL_PANEL = 'control-panel';
+
+  // Configuration
   static readonly PAGE = 'page';
-  static readonly START_PAGE = `${States.AUTH}/start-page`;
-  /* tslint:enable */
 }

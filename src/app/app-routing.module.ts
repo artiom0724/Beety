@@ -12,13 +12,13 @@ const routes: Routes = [
     canActivate: [ LoginGuard ],
   },
   {
-    path: '',
+    path: States.ORGANIZATION,
     loadChildren: './modules/layouts/configuration-main-layout/configuration-main-layout.module#ConfigurationMainLayoutModule',
     canLoad: [ AuthGuard ]
   },
   {
     path: '',
-    redirectTo: States.START_PAGE,
+    redirectTo: States.AUTH,
     pathMatch: 'full'
   }
 ];
@@ -30,5 +30,6 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule {
 }

@@ -5,5 +5,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
   templateUrl: './app.component.html',
   encapsulation: ViewEncapsulation.None
 })
+
 export class AppComponent {
 }
