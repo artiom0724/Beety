@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DataAccess;
+using DataAccess.EntitiesRepositories;
+using DataAccess.EntitiesRepositories.SecurityRepositories;
+using GraphQLModels.SecurityQuery;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -32,6 +35,10 @@ namespace Beety
 
             
             services.AddMvc();
+
+            services.AddTransient<UserQuery>();
+            services.AddTransient<IUserRepository, UserRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
