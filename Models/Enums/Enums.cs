@@ -18,7 +18,7 @@ namespace Models.Enums
             Premium = 3
         };
 
-        public enum UserType : int
+        public enum UserRole : int
         {
             Client = 1,
             Privator = 2,

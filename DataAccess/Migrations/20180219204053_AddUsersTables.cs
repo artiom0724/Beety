@@ -86,7 +86,7 @@ namespace DatabaseMigrations.Migrations
                     Id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     UserId = table.Column<long>(nullable: false),
-                    UserType = table.Column<int>(nullable: false)
+                    UserRole = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

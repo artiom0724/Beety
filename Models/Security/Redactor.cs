@@ -13,6 +13,6 @@ namespace Models.Security
 
         public User User { get; set; }
 
-        public UserType UserType { get; set; }//Administrator or Moderator
+        public UserRole UserRole { get; set; }//Administrator or Moderator
     }
 }

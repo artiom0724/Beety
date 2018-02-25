@@ -10,7 +10,7 @@ namespace Models.Security
 
         public User User { get; set; }
 
-        public string BossName { get; set; }
+        public string Name { get; set; }
 
         public ServiceCategory ServiceCategory;
 
