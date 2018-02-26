@@ -17,6 +17,10 @@ export class ValidationMessages {
     return 'Enter correct phone number';
   }
 
+  static upn(): string {
+    return 'Enter correct upn';
+  }
+
   static incorrectSymbols(label: string): string {
     return `${label} contains incorrect symbols`;
   }

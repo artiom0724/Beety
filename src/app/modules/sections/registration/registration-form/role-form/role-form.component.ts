@@ -6,6 +6,7 @@ import { FormConstants } from '../../../../../constant/form.constants';
 import { ROLE_OPTIONS } from '../../../../../data/roles';
 import { SERVICES } from '../../../../../data/services';
 import * as _ from 'lodash';
+import { createUpnValidator } from '../../../../../validation/upn.validator';
 
 @Component({
   selector: 't-role-form',
@@ -22,7 +23,7 @@ export class RoleFormComponent implements OnInit {
   readonly roleOptions = _.values(ROLE_OPTIONS);
   readonly controlNames = {
     COMPANY_NAME: 'companyName',
-    COMPANY_ID: 'companyId',
+    COMPANY_UPN: 'companyUpn',
     SERVICES: 'services',
   };
 
@@ -49,10 +50,13 @@ export class RoleFormComponent implements OnInit {
     if (role === RoleConstants.ORGANIZATION) {
       this.form.addControl(
         this.controlNames.COMPANY_NAME,
-        new FormControl('', FormValidators.required(this.formConstants.COMPANY_NAME_VALIDATION_LABEL))
+        new FormControl('', [
+          FormValidators.required(this.formConstants.COMPANY_NAME_VALIDATION_LABEL),
+          FormValidators.lengthRange(2, 50, this.formConstants.COMPANY_NAME_VALIDATION_LABEL)
+        ])
       );
-      this.form.addControl(this.controlNames.COMPANY_ID,
-        new FormControl('', FormValidators.required(this.formConstants.COMPANY_ID_VALIDATION_LABEL))
+      this.form.addControl(this.controlNames.COMPANY_UPN,
+        new FormControl('', createUpnValidator())
       );
     }
   }

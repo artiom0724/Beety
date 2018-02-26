@@ -4,8 +4,8 @@ export class FormConstants {
   static readonly ROLE_VALIDATION_LABEL = 'Role';
   static readonly COMPANY_NAME_LABEL = 'Company Name';
   static readonly COMPANY_NAME_VALIDATION_LABEL = FormConstants.COMPANY_NAME_LABEL;
-  static readonly COMPANY_ID_LABEL = 'Company Id';
-  static readonly COMPANY_ID_VALIDATION_LABEL = FormConstants.COMPANY_ID_LABEL;
+  static readonly COMPANY_UPN_LABEL = 'Company UPN';
+  static readonly COMPANY_UPN_VALIDATION_LABEL = FormConstants.COMPANY_UPN_LABEL;
   static readonly SERVICES_LABEL = 'Services';
   static readonly SERVICES_VALIDATION_LABEL = FormConstants.SERVICES_LABEL;
 
