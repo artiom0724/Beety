@@ -1,0 +1,30 @@
+<form [formGroup]="form">
+  <t-app-select [control]="role"
+                [options]="roleOptions"
+                [values]="roles"
+                [label]="formConstants.ROLE_LABEL"
+                [required]="true">
+  </t-app-select>
+
+  <t-app-input *ngIf="form.contains(controlNames.COMPANY_NAME)"
+               [control]="form.get(controlNames.COMPANY_NAME)"
+               [label]="formConstants.COMPANY_NAME_LABEL"
+               placeholder=""
+               [required]="true">
+  </t-app-input>
+
+  <t-app-input *ngIf="form.contains(controlNames.COMPANY_ID)"
+               [control]="form.get(controlNames.COMPANY_ID)"
+               [label]="formConstants.COMPANY_ID_LABEL"
+               placeholder=""
+               [required]="true">
+  </t-app-input>
+
+  <t-app-select *ngIf="form.contains(controlNames.SERVICES)"
+                [control]="form.get(controlNames.SERVICES)"
+                [options]="serviceOptions"
+                [values]="serviceOptions"
+                [label]="formConstants.SERVICES_LABEL"
+                [required]="true">
+  </t-app-select>
+</form>

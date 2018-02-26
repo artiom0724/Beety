@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-select [formControl]="control" [placeholder]="label" [required]="required">
+    <mat-option *ngFor="let option of options; let i = index" [value]="values[i]">{{option}}</mat-option>
+  </mat-select>
+  <mat-error *ngIf="control.invalid">
+    {{control.errors.message}}
+  </mat-error>
+</mat-form-field>

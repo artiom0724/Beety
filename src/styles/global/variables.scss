@@ -1,0 +1,27 @@
+
+$version: 1;
+
+//colours
+
+$white: rgba(white, 1);
+$blue: mat-color($mat-blue, 600);
+$dark-blue: mat-color($mat-blue, 700);
+
+$turquoise: mat-color($mat-teal, 300);
+$dark-turquoise: mat-color($mat-teal, 400);
+
+$heavenly: mat-color($mat-teal, A200);
+$dark-heavenly: mat-color($mat-teal, A400);
+
+$red: mat-color($mat-red, 500);
+$dark-red: mat-color($mat-red, 600);
+
+$yellow: mat-color($mat-yellow, 700);
+$dark-yellow: mat-color($mat-yellow, 800);
+
+$grey: mat-color($mat-grey, 300);
+$dark-grey: mat-color($mat-grey, 800);
+
+$light-grey: rgba(black, .03);
+$bright-grey: $black-6-opacity;
+$muted-gray: $black-12-opacity;
