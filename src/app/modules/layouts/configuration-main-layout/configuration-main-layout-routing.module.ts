@@ -12,10 +12,6 @@ const configurationMainLayoutRoutes: Routes = [
       {
         path: '',
         loadChildren: '../../sections/page/page.module#PageModule',
-      },
-      {
-        path: States.PAGE,
-        loadChildren: '../../sections/page/page.module#PageModule',
       }
     ]
   }
