@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+import { StartPageComponent } from './start-page.component';
+
 import { LoginGuard } from '../../../guards/login.guard';
-import { LoginComponent } from './login.component';
 
 const loginRoutes: Routes = [
-  { path: '', component: LoginComponent, canActivate: [ LoginGuard ] }
+  {path: '', component: StartPageComponent}
 ];
 
 @NgModule({
   imports: [
     RouterModule.forChild(loginRoutes)
   ],
-  exports: [RouterModule]
+  exports: [ RouterModule ]
 })
-export class LoginRoutingModule {
 
+export class StartPageRoutingModule {
 }

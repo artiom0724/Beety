@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ConfigurationAuthLayoutComponent } from './configuration-auth-layout.component';
+import { States } from '../../../constant/states.constant';
 
 const configurationAuthLayoutRoutes: Routes = [
   {
@@ -9,6 +10,13 @@ const configurationAuthLayoutRoutes: Routes = [
     component: ConfigurationAuthLayoutComponent,
     children: [
       {
+        path: States.START_PAGE,
+        loadChildren: '../../sections/start-page/start-page.module#StartPageModule'
+      },
+      {
+        path: '',
+        redirectTo: States.START_PAGE,
+        pathMatch: 'full'
         path: 'login',
         loadChildren: '../../sections/login/login.module#LoginModule'
       },
@@ -26,6 +34,6 @@ const configurationAuthLayoutRoutes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class ConfigurationAuthLayoutRoutingModule {
 
+export class ConfigurationAuthLayoutRoutingModule {
 }
