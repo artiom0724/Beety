@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { GuardsModule } from './guards/guards.module';
 import { ServicesModule } from './services/services.module';
 import { InterceptorsModule } from './services/interceptor/interceptors.module';
+import { MaterialModule } from './modules/shared/material.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { InterceptorsModule } from './services/interceptor/interceptors.module';
     AppRoutingModule,
     InterceptorsModule,
     BrowserAnimationsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,6 @@
 // Bootstrap grid
 @import "bootstrap/bootstrap-custom";
 
-// Angular material
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
 // Material icons
 @import "~material-design-icons/iconfont/material-icons.css";
 
@@ -12,3 +9,17 @@
 @import "main-page/main-page.scss";
 @import "auth-footer/auth-footer.scss";
 @import "auth-header/auth-header.scss";
+
+// Mat theme + mat theme vars
+@import "themes/themes";
+
+// Variables
+@import "global/variables";
+@import "global/g-config";
+
+@import "layouts/l-grid";
+
+@import "components/c-buttons";
+@import "components/c-forms";
+@import "components/c-tabs-panel";
+@import "components/c-profile";

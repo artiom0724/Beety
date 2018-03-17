@@ -1,0 +1,11 @@
+<mat-form-field>
+  <mat-label>{{label}}</mat-label>
+  <span matPrefix>{{code}} &nbsp;</span>
+  <input matInput [placeholder]="placeholder"
+         mask="00 000-0000" [formControl]="phone"
+         required>
+  <mat-icon matSuffix>phone</mat-icon>
+  <mat-error *ngIf="control.invalid">
+    {{control.errors.message}}
+  </mat-error>
+</mat-form-field>

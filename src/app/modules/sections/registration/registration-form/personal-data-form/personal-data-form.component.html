@@ -1,0 +1,38 @@
+<form [formGroup]="form">
+  <div class="c-profile__item">
+    <t-app-input [control]="firstName"
+                 [label]="formConstants.FIRST_NAME_LABEL"
+                 placeholder="John"
+                 [required]="true">
+    </t-app-input>
+
+    <t-app-input [control]="lastName"
+                 [label]="formConstants.LAST_NAME_LABEL"
+                 placeholder="Doe"
+                 [required]="true">
+    </t-app-input>
+
+    <t-app-input [control]="middleName"
+                 [label]="formConstants.MIDDLE_NAME_LABEL"
+                 placeholder="Mc.Gregor"
+                 [required]="true">
+    </t-app-input>
+  </div>
+
+  <div class="c-profile__item">
+    <t-phone-input [control]="phone"
+                   [label]="formConstants.PHONE_LABEL"
+                   [initialCountry]="getInitialCountry()">
+    </t-phone-input>
+
+    <t-app-input [control]="email"
+                 [label]="formConstants.EMAIL_LABEL"
+                 placeholder="john.doe@example.com"
+                 [required]="true">
+    </t-app-input>
+
+    <t-password-input [control]="password"
+                      [label]="formConstants.PASSWORD_LABEL">
+    </t-password-input>
+  </div>
+</form>
