@@ -1,0 +1,11 @@
+.l-section {
+  &._registration {
+    background: $light-grey;
+    border-top: 5px solid mat-color($primary, lighter);
+    padding-bottom: 1px;
+    margin-top: 17px;
+  }
+  &._tabs-panel {
+    background: mat-color($primary);
+  }
+}

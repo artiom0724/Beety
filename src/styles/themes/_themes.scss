@@ -1,0 +1,9 @@
+// Material themes
+@import "~@angular/material/theming";
+
+// Used theme
+//@import "prebuild/indigo-pink";
+@import "prebuild/indigo-pink";
+
+// Re-export theme variables
+@import "variables";
