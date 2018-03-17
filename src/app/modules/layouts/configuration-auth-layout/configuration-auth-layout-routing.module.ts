@@ -14,13 +14,6 @@ const configurationAuthLayoutRoutes: Routes = [
         loadChildren: '../../sections/start-page/start-page.module#StartPageModule'
       },
       {
-        path: '',
-        redirectTo: States.START_PAGE,
-        pathMatch: 'full'
-        path: 'login',
-        loadChildren: '../../sections/login/login.module#LoginModule'
-      },
-      {
         path: 'registration',
         loadChildren: '../../sections/registration/registration.module#RegistrationModule'
       }
