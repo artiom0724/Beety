@@ -10,7 +10,7 @@ const configurationMainLayoutRoutes: Routes = [
     component: ConfigurationMainLayoutComponent,
     children: [
       {
-        path: '',
+        path: States.PAGE,
         loadChildren: '../../sections/page/page.module#PageModule',
       }
     ]

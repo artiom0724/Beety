@@ -8,13 +8,13 @@ const routes: Routes = [
   {
     path: States.AUTH,
     loadChildren: './modules/layouts/configuration-auth-layout/configuration-auth-layout.module#ConfigurationAuthLayoutModule',
-    canLoad: [ LoginGuard ],
-    canActivate: [ LoginGuard ],
+    canLoad: [LoginGuard],
+    canActivate: [LoginGuard],
   },
   {
     path: States.ORGANIZATION,
     loadChildren: './modules/layouts/configuration-main-layout/configuration-main-layout.module#ConfigurationMainLayoutModule',
-    canLoad: [ AuthGuard ]
+    canLoad: [AuthGuard]
   },
   {
     path: '',
