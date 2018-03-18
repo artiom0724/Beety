@@ -10,6 +10,10 @@ const configurationAuthLayoutRoutes: Routes = [
     component: ConfigurationAuthLayoutComponent,
     children: [
       {
+        path: '',
+        redirectTo: States.START_PAGE,
+      },
+      {
         path: States.START_PAGE,
         loadChildren: '../../sections/start-page/start-page.module#StartPageModule'
       },

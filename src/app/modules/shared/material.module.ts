@@ -6,7 +6,9 @@ import {
   MatTabsModule,
   MatInputModule,
   MatFormFieldModule,
-  MatSnackBarModule, MatStepperModule, MatSelectModule,
+  MatSnackBarModule,
+  MatStepperModule,
+  MatSelectModule,
 } from '@angular/material';
 
 @NgModule({
