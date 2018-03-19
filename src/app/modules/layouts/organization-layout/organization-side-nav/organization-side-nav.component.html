@@ -1,0 +1,26 @@
+<mat-sidenav-container >
+  <mat-sidenav class="c-org-side"
+               mode="over"
+               [opened]="isShown()"
+               [fixedInViewport]="true"
+               (closedStart)="close()">
+    <h2 mat-subheader class="c-org-side__header">Company Name</h2>
+    <mat-nav-list class="c-org-side__group">
+      <a mat-list-item
+         *ngFor="let item of menuItems"
+         class="c-org-side__item"
+         [routerLink]="item.link"
+         routerLinkActive="_active"
+         #routerLink="routerLinkActive">
+        <mat-icon matListIcon>{{item.icon}}</mat-icon>
+        {{item.label}}
+        <span class="l-spacer"></span>
+        <mat-icon>{{routerLink.isActive ? 'keyboard_arrow_down' : 'chevron_right'}}</mat-icon>
+      </a>
+      <mat-divider></mat-divider>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

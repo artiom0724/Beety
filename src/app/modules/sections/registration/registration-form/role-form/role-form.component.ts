@@ -27,9 +27,9 @@ export class RoleFormComponent implements OnInit {
     SERVICES: 'services',
   };
 
-  constructor(private fb: FormBuilder) {
+  constructor(fb: FormBuilder) {
     // Eagerly initialize form, cause it's used in parent component
-    this.form = this.fb.group({
+    this.form = fb.group({
       role: this.role
     });
   }

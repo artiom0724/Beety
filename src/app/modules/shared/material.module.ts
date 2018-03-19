@@ -9,6 +9,9 @@ import {
   MatSnackBarModule,
   MatStepperModule,
   MatSelectModule,
+  MatToolbarModule,
+  MatSidenavModule,
+  MatListModule,
 } from '@angular/material';
 
 @NgModule({
@@ -22,6 +25,9 @@ import {
     MatTabsModule,
     MatStepperModule,
     MatSelectModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   exports: [
     MatIconModule,
@@ -33,6 +39,9 @@ import {
     MatTabsModule,
     MatStepperModule,
     MatSelectModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
   ]
 })
 

@@ -1,0 +1,23 @@
+.c-org-side {
+  background-color: mat-color($primary, darker);
+  padding: 10px 0;
+  &__header {
+    display: block !important;
+    color: mat-color($primary, darker-contrast);
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__group {
+    background-color: mat-color($primary, 400);
+  }
+  &__item {
+    padding: 0 10px;
+    min-width: 300px;
+    color: mat-color($primary, darker-contrast) !important;
+    font: 18px/22px 'HelveticaNeueCyr_medium', Arial, sans-serif !important;
+    &._active {
+      background: $bright-grey;
+      cursor: default;
+    }
+  }
+}

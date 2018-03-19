@@ -1,4 +1,10 @@
 .l-section {
+  &._organization-data {
+    background: $white;
+    border-top: 5px solid mat-color($accent, lighter);
+    margin-top: 17px;
+    overflow: auto;
+  }
   &._registration {
     background: $light-grey;
     border-top: 5px solid mat-color($primary, lighter);
@@ -8,4 +14,8 @@
   &._tabs-panel {
     background: mat-color($primary);
   }
+}
+
+.l-spacer {
+  flex: 1 1 auto;
 }

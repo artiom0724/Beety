@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 't-configuration-main-layout',
-  templateUrl: './configuration-main-layout.component.html'
+  selector: 't-organization-layout',
+  templateUrl: './organization-layout.component.html'
 })
 export class ConfigurationMainLayoutComponent {
 
