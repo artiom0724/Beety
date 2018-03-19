@@ -35,9 +35,9 @@ export class PersonalDataFormComponent {
   readonly email = new FormControl('', createEmailValidator());
   readonly password = new FormControl('', createPasswordValidator(this.formConstants.PASSWORD_VALIDATION_LABEL));
 
-  constructor(private fb: FormBuilder) {
+  constructor(fb: FormBuilder) {
     // Eagerly initialize form, cause it's used in parent component
-    this.form = this.fb.group({
+    this.form = fb.group({
       firstName: this.firstName,
       lastName: this.lastName,
       middleName: this.middleName,

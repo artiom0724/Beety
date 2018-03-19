@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { States } from '../../../constant/states.constant';
 
-import { ConfigurationMainLayoutComponent } from './configuration-main-layout.component';
+import { ConfigurationMainLayoutComponent } from './organization-layout.component';
+import { EmployeesModule } from '../../sections/employees/employees.module';
 
 const configurationMainLayoutRoutes: Routes = [
   {
@@ -10,8 +11,8 @@ const configurationMainLayoutRoutes: Routes = [
     component: ConfigurationMainLayoutComponent,
     children: [
       {
-        path: States.PAGE,
-        loadChildren: '../../sections/page/page.module#PageModule',
+        path: States.EMPLOYEES,
+        loadChildren: '../../sections/employees/employees.module#EmployeesModule',
       }
     ]
   }
@@ -23,6 +24,6 @@ const configurationMainLayoutRoutes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class ConfigurationMainLayoutRoutingModule {
+export class OrganizationLayoutRoutingModule {
 
 }

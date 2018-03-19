@@ -6,14 +6,18 @@ import { StartPageComponent } from './start-page.component';
 import { LoginGuard } from '../../../guards/login.guard';
 
 const loginRoutes: Routes = [
-  {path: '', component: StartPageComponent}
+  {
+    path: '',
+    component: StartPageComponent,
+    data: {title: 'Beety'}
+  }
 ];
 
 @NgModule({
   imports: [
     RouterModule.forChild(loginRoutes)
   ],
-  exports: [ RouterModule ]
+  exports: [RouterModule]
 })
 
 export class StartPageRoutingModule {

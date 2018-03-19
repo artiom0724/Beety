@@ -10,15 +10,15 @@ import { Title } from '@angular/platform-browser';
 })
 
 export class AppComponent {
-  constructor(private router: Router,
-              private activatedRoute: ActivatedRoute,
-              private matSnackBar: MatSnackBar,
-              private titleService: Title) {
+  constructor(router: Router,
+              activatedRoute: ActivatedRoute,
+              matSnackBar: MatSnackBar,
+              titleService: Title) {
     router.events
       .filter(event => event instanceof NavigationEnd)
       .do(() => matSnackBar.dismiss())
       .map(() => {
-        let route = this.activatedRoute;
+        let route = activatedRoute;
         while (route.firstChild) {
           route = route.firstChild;
         }
@@ -26,9 +26,6 @@ export class AppComponent {
       })
       .filter(route => route.outlet === 'primary')
       .switchMap(route => route.data)
-      .subscribe(event => {
-          this.titleService.setTitle(event['title']);
-        }
-      );
+      .subscribe(event => titleService.setTitle(event.title));
   }
 }

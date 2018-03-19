@@ -7,14 +7,15 @@ import { LoginGuard } from './guards/login.guard';
 const routes: Routes = [
   {
     path: States.AUTH,
-    loadChildren: './modules/layouts/configuration-auth-layout/configuration-auth-layout.module#ConfigurationAuthLayoutModule',
+    loadChildren: './modules/layouts/auth-layout/auth-layout.module#AuthLayoutModule',
     canLoad: [LoginGuard],
     canActivate: [LoginGuard],
   },
   {
     path: States.ORGANIZATION,
-    loadChildren: './modules/layouts/configuration-main-layout/configuration-main-layout.module#ConfigurationMainLayoutModule',
-    canLoad: [AuthGuard]
+    loadChildren: './modules/layouts/organization-layout/organization-layout.module#OrganizationLayoutModule',
+    canLoad: [AuthGuard],
+    canActivate: [AuthGuard]
   },
   {
     path: '',

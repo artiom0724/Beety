@@ -1,8 +1,8 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 't-configuration-auth-layout',
-  templateUrl: './configuration-auth-layout.component.html',
+  selector: 't-auth-layout',
+  templateUrl: './auth-layout.component.html',
   encapsulation: ViewEncapsulation.None
 })
 
