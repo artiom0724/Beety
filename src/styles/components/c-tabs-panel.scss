@@ -1,0 +1,12 @@
+.c-tabs-panel {
+  .mat-tab-link {
+    opacity: 1;
+    height: 96px;
+    padding: 0 74px;
+    font: 30px/36px Roboto, "Helvetica Neue", sans-serif;
+    background-color: mat-color($primary, lighter, .3);
+  }
+  .mat-ink-bar {
+    background-color: mat-color($accent) !important;
+  }
+}

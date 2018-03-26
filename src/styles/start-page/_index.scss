@@ -1,0 +1,41 @@
+@import "libs/vars";
+@import "libs/functions";
+@import "libs/mixins";
+@import "libs/skel";
+
+@include skel-breakpoints((
+  xlarge: '(max-width: 1680px)',
+  large: '(max-width: 1280px)',
+  medium: '(max-width: 980px)',
+  small: '(max-width: 736px)',
+  xsmall: '(max-width: 480px)'
+));
+
+@include skel-layout((
+  reset: 'full',
+  boxModel: 'border',
+  grid: ( gutters: 2.5em ),
+  conditionals: true,
+  containers: 70em,
+  breakpoints: (
+    large: (
+      containers: 90%,
+    ),
+    medium: (
+      containers: (100%, true),
+    )
+  )
+));
+
+@mixin line-icon($bg: _palette(bg), $fg: _palette(fg-bold)) {
+  @include icon;
+  $size: 1px;
+
+  &:before {
+    color: $bg !important;
+    text-shadow:	$size 0 0 $fg,
+      ($size * -1) 0 0 $fg,
+    0 $size 0 $fg,
+    0 ($size * -1) 0 $fg;
+  }
+}

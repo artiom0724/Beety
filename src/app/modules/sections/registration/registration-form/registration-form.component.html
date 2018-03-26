@@ -1,0 +1,27 @@
+<mat-card class="c-profile">
+  <mat-horizontal-stepper [linear]="true">
+    <mat-step [stepControl]="roleForm.form">
+      <ng-template matStepLabel>Choose your role here</ng-template>
+      <t-role-form></t-role-form>
+      <div class="c-profile__action">
+        <button class="c-button _done"
+                mat-raised-button color="accent"
+                matStepperNext
+                [disabled]="roleForm.form.invalid">
+          Next
+        </button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="personalDataForm.form">
+      <ng-template matStepLabel>Personal data</ng-template>
+      <t-personal-data-form></t-personal-data-form>
+      <div class="c-profile__action">
+        <button class="c-button _done mat-raised-button mat-accent" type="submit"
+                [disabled]="personalDataForm.form.invalid"
+                (click)="onDone()">
+          Done
+        </button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</mat-card>
