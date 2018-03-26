@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, CanLoad, Router } from '@angular/router';
-
-import { SecurityService } from '@app/services';
+import { AuthService } from '../services/security.service';
+import { BasePageService } from '../services/base-page.service';
 
 @Injectable()
 export class LoginGuard implements CanActivate, CanLoad {
 
-  constructor(private securityService: SecurityService, private router: Router) {
+  constructor(private basePageService: BasePageService) {
   }
 
   canLoad(): boolean {
@@ -18,11 +18,10 @@ export class LoginGuard implements CanActivate, CanLoad {
   }
 
   checkLogin(): boolean {
-    if (!this.securityService.isLoggedIn()) {
+    if (!AuthService.isLoggedIn()) {
       return true;
     }
-
-    this.router.navigate(['/']);
+    this.basePageService.navigateUser();
     return false;
   }
 }

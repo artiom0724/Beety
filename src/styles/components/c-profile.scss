@@ -1,0 +1,19 @@
+.c-profile {
+  border: 5px solid mat-color($primary);
+  margin-top: 17px;
+  padding: 0 75px 124px;
+  margin-bottom: 148px;
+  &__item {
+    padding: 40px 50px 42px;
+    border-top: 44px solid $bright-grey;
+    &:first-child {
+      padding: 20px 50px;
+      border-top: 0;
+    }
+  }
+  &__action {
+    text-align: center;
+    margin-top: 83px;
+    margin-bottom: 27px;
+  }
+}

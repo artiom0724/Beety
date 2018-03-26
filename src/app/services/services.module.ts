@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { SecurityService } from './security.service';
+import { AuthService } from './security.service';
+import { GeoService } from './geo.service';
+import { BasePageService } from './base-page.service';
+import { SideNavService } from './side-nav.service';
 
 @NgModule({
   imports: [
@@ -9,7 +12,10 @@ import { SecurityService } from './security.service';
     HttpClientModule
   ],
   providers: [
-    SecurityService
+    AuthService,
+    GeoService,
+    BasePageService,
+    SideNavService,
   ]
 })
 export class ServicesModule {
