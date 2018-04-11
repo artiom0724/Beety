@@ -36,8 +36,10 @@ export class TableMaterialComponent {
   displayedColumns = ['name', 'value', 'count', 'actionsColumn'];
 
   @Input() personList = [
-    { name: 'Mark', value: 15, count: 12 },
-    { name: 'Brad', value: 15, count: 12 },
+    { name: 'Scissors standard', value: 5.55, count: 6 },
+    { name: 'Thinning scissors', value: 6.55, count: 6 },
+    { name: 'Shearer', value: 15.99, count: 3 },
+    { name: 'Something for beauty', value: 99.99, count: 1}
   ] ;
   @Output() personListChange = new EventEmitter<Consumables[]>();
 
@@ -49,7 +51,7 @@ export class TableMaterialComponent {
   }
 
   UpoadData(){
-    /*Тут вызов сервиса, чтобы поcлать все изменнёные или новые материалы*/
+    /*Тут вызов сервиса, чтобы отправить все изменнёные или новые материалы*/
   }
 
   ngOnInit() {

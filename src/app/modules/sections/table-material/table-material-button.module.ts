@@ -4,6 +4,7 @@ import {TableMaterialButtonComponent, TableMaterialComponent} from './table-mate
 import {CommonModule} from "@angular/common";
 import {MatButtonModule, MatIconModule, MatInputModule, MatTableModule} from "@angular/material";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { MaterialModule } from '../../shared/material.module';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
+    MaterialModule
   ],
 
   declarations: [
