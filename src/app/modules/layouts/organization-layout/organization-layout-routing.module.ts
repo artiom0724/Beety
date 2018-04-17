@@ -4,6 +4,7 @@ import { States } from '../../../constant/states.constant';
 
 import { ConfigurationMainLayoutComponent } from './organization-layout.component';
 import { EmployeesModule } from '../../sections/employees/employees.module';
+import { ClientsModule } from '../../sections/clients/clients.module';
 
 const configurationMainLayoutRoutes: Routes = [
   {
@@ -13,6 +14,10 @@ const configurationMainLayoutRoutes: Routes = [
       {
         path: States.EMPLOYEES,
         loadChildren: '../../sections/employees/employees.module#EmployeesModule',
+      },
+      {
+        path: States.CLIENTS,
+        loadChildren: '../../sections/clients/clients.module#ClientsModule',
       }
     ]
   }
