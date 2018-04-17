@@ -1,0 +1,61 @@
+<div class="dialog-box">
+
+  <div class="card-header">
+    <div class="header-sidebar-left">
+      <mat-icon mat-card-avatar class="card-header-icon">perm_contact_calendar
+      </mat-icon>
+    </div>
+
+    <!-- <div class="header-sidebar-right">
+      <button mat-icon-button matTooltip="Delete" (click)="deleteClient()" tabindex="-1">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button mat-icon-button matTooltip="Close" [mat-dialog-close] tabindex="-1">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div> -->
+
+    <div class="header-middle">
+      <span *ngIf="!client.id">New </span>
+      Client
+      <div class="header-subtitle" *ngIf="client.id">
+        №{{client.id}}
+      </div>
+    </div>
+    
+  </div>
+
+    <div mat-dialog-content>
+      <form>
+        <table cellspacing="0"><tr>
+            <td><mat-form-field>
+                <input matInput placeholder="ФИО" name="name">
+            </mat-form-field></td>
+            <td><mat-form-field>
+                <input matInput placeholder="Телефон" name="phoneNumber">
+            </mat-form-field></td>
+            <td><mat-form-field>
+                <input matInput placeholder="Электронная почта" name="email">
+            </mat-form-field></td>
+        </tr></table>
+
+        <table cellspacing="0"><tr>
+            <td><mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="День рождения" name="birthday">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field></td>
+            <td><mat-form-field>
+                <mat-select placeholder="Пол">
+                    <mat-option *ngFor="let sex of sexList" [value]="sex">{{sex}}</mat-option>
+                </mat-select>
+            </mat-form-field></td>
+        </tr></table>
+      </form>  
+    </div>  
+
+    <div mat-dialog-actions>
+        <button mat-button color="primary" type="submit" (click)="cancelClientDetail()">CANCEL</button>
+        <button mat-button color="primary" [mat-dialog-close]="data">APPLY</button>
+    </div>
+</div>
