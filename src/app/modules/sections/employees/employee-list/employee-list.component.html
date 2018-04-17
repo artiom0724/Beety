@@ -1,0 +1,43 @@
+<div class="paginated-table">
+        <mat-table #table [dataSource]="dataSource">
+            <!-- Position Column -->
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef> ФИО </mat-header-cell>
+                <mat-cell *matCellDef="let employee"> {{employee.name}} </mat-cell>
+            </ng-container>
+    
+            <ng-container matColumnDef="sex">
+                <mat-header-cell *matHeaderCellDef> ПОЛ </mat-header-cell>
+                <mat-cell *matCellDef="let employee"> {{employee.sex}} </mat-cell>
+            </ng-container>
+    
+            <ng-container matColumnDef="phoneNumber">
+                <mat-header-cell *matHeaderCellDef> ТЕЛЕФОН </mat-header-cell>
+                <mat-cell *matCellDef="let employee"> {{employee.phoneNumber}} </mat-cell>
+            </ng-container>
+    
+            <ng-container matColumnDef="email">
+                <mat-header-cell *matHeaderCellDef> Электронная почта </mat-header-cell>
+                <mat-cell *matCellDef="let employee"> {{employee.email}} </mat-cell>
+            </ng-container>
+    
+            <ng-container matColumnDef="comment">
+                <mat-header-cell *matHeaderCellDef> Комментарий </mat-header-cell>
+                <mat-cell *matCellDef="let employee"> {{employee.comment}} </mat-cell>
+            </ng-container>
+    
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openEmployeeDetail(row.name, row)"></mat-row>
+        </mat-table>
+    
+        <div class="add-new-note">
+            <button mat-fab color="accent" matTooltip="Add new note" class="add-fab-btn" (click)="openEmployeeDetail()">
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+    
+        <mat-paginator class="paginator" #paginator
+            [pageSize]="10"
+            [pageSizeOptions]="[5, 10, 20]">
+        </mat-paginator>
+    </div>
