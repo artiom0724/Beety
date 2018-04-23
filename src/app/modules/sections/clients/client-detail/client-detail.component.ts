@@ -1,14 +1,12 @@
 import { Component, Inject } from '@angular/core';
-import { MatDatepickerModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
-import { ErrorStateMatcher} from '@angular/material/core';
-import { Client} from './../client';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { Client } from './../client';
 import { ClientService } from './../clients.service';
 
 @Component({
   selector: 't-client-detail',
   templateUrl: 'client-detail.component.html',
-  styleUrls: ['./client-detail.component.sass']
+  styleUrls: ['./client-detail.component.scss']
 })
 
 export class ClientDetailComponent {
@@ -17,26 +15,16 @@ export class ClientDetailComponent {
 
   deletedClientId: number;
 
-  sexList = ['Мужской', 'Женский'];
+  readonly sexList = ['Мужской', 'Женский'];
 
   constructor(
     public dialogRef: MatDialogRef<ClientDetailComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private clientService: ClientService) {
-      this.client = <Client> data.client;
+      this.client = data.client as Client;
     }
 
   cancelClientDetail(): void {
     this.dialogRef.close();
-  }
-
-  deleteClient() {
-    this.log(`Deleting client ${JSON.stringify(this.client)}`);
-    this.deletedClientId = this.client.id;
-    this.clientService.deleteClient(this.client);
-  }
-
-  private log(message: string) {
-    console.log('ClientDetailComponent: ' + message);
   }
 }

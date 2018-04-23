@@ -1,0 +1,44 @@
+<h1>Заявка на размещение рекламы</h1>
+<form [formGroup]="form">
+  <t-app-input [control]="firstName"
+               [label]="formConstants.FIRST_NAME_LABEL"
+               placeholder="John"
+               [required]="true">
+  </t-app-input>
+
+  <t-app-input [control]="lastName"
+               [label]="formConstants.LAST_NAME_LABEL"
+               placeholder="Doe"
+               [required]="true">
+  </t-app-input>
+
+  <t-app-input [control]="middleName"
+               [label]="formConstants.MIDDLE_NAME_LABEL"
+               placeholder="Mc.Gregor"
+               [required]="true">
+  </t-app-input>
+
+  <t-phone-input [control]="contactPhone"
+                 [label]="formConstants.CONTACT_PHONE_LABEL"
+                 [initialCountry]="getInitialCountry()">
+  </t-phone-input>
+
+  <t-app-input [control]="description"
+               [label]="formConstants.DESCRIPTION_LABEL"
+               placeholder="Пожелания"
+               [required]="false">
+  </t-app-input>
+
+  <div style="display: flex;">
+    <button class="mat-raised-button mat-accent" type="submit"
+            [disabled]="form.invalid"
+            (click)="onDone()">
+      Отправить
+    </button>
+    <span class="l-spacer"></span>
+    <button class="mat-raised-button mat-error" type="button"
+            (click)="onCancel()">
+      Отмена
+    </button>
+  </div>
+</form>

@@ -21,4 +21,7 @@ export class FormConstants {
   static readonly EMAIL_VALIDATION_LABEL = FormConstants.EMAIL_LABEL;
   static readonly PASSWORD_LABEL = 'Password';
   static readonly PASSWORD_VALIDATION_LABEL = FormConstants.PASSWORD_LABEL;
+
+  static readonly CONTACT_PHONE_LABEL = 'Контактный телефон';
+  static readonly DESCRIPTION_LABEL = 'Описание';
 }
