@@ -17,7 +17,6 @@ export class OrganizationSideNavComponent {
     new MenuItem('Analytics', ['/', States.ORGANIZATION, States.ANALYTICS], 'show_chart'),
     new MenuItem('Finance', ['/', States.ORGANIZATION, States.FINANCE], 'attach_money'),
     new MenuItem('Calculation of Salaries', ['/', States.ORGANIZATION, States.CALCULATION_OF_SALARIES], 'credit_card'),
-    new MenuItem('Online Appointment', ['/', States.ORGANIZATION, States.ONLINE_APPOINTMENT], 'language'),
   ];
 
   constructor(private sideNavService: SideNavService) {
