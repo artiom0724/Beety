@@ -7,7 +7,7 @@ import { ClientDetailComponent } from './../client-detail/client-detail.componen
 @Component({
   selector: 't-client-list',
   templateUrl: './client-list.component.html',
-  styleUrls: ['./client-list.component.sass']
+  styleUrls: ['./client-list.component.scss']
 })
 
 export class ClientListComponent implements OnInit, AfterViewInit {
@@ -18,7 +18,6 @@ export class ClientListComponent implements OnInit, AfterViewInit {
   pageNumber = 1;
   pageSize = 10;
   length: number;
-  pageEvent: PageEvent;
 
   constructor(
     private clientService: ClientService,
@@ -60,32 +59,22 @@ export class ClientListComponent implements OnInit, AfterViewInit {
 
     const dialogRef = this.dialog.open(ClientDetailComponent, {
       width: '600px',
-      data: { client: client }
+      data: {client: client}
     });
 
     dialogRef.afterClosed().subscribe(result => {
       if (dialogRef.componentInstance.deletedClientId > 0) {
-        this.log(`${result}`);
+        console.log(`ClientListComponent: ${result}`);
         return;
       }
 
-      const mockClient = new Client (11, 'xxx', '+375296949195', 'test@gmail.com', new Date(2018, 3, 28), 0, 'Мужской', '0%');
       if (isEditable) {
-        this.log(`EDIT ${JSON.stringify(client)}`);
+        console.log(`ClientListComponent: EDIT ${JSON.stringify(client)}`);
         this.clientService.updateClient(client);
-      } else {
-        this.log(`ADD ${JSON.stringify(client)}`);
-        const clients = this.clientService.addClient(client);
-        this.dataSource.data = clients;
+        return;
       }
+      console.log(`ClientListComponent: ADD ${JSON.stringify(client)}`);
+      this.dataSource.data = this.clientService.addClient(client);
     });
-  }
-
-  private getClientById(id: number): Client {
-      return null;
-  }
-
-  private log(message: string) {
-    console.log('ClientListComponent: ' + message);
   }
 }

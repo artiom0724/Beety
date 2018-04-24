@@ -32,38 +32,11 @@ export class EmployeesService {
        birthdayDate: new Date(1991, 10, 14), sex: 'Мужской', comment: ''},
   ];
 
-  constructor (private http: HttpClient) {
-  }
-
-  getEmployees(page: number, pageSize: number): Employee[] {
+  getEmployees(): Employee[] {
     return this.employees;
   }
 
   getEmployeeCount(): number {
     return this.employees.length;
-  }
-
-  addEmployee(employee: Employee): Employee {
-    this.employees.push(employee);
-    return employee;
-  }
-
-  updateEmployee(employee: Employee): Employee {
-    return employee;
-  }
-
-  deleteEmployee(employee: Employee): void {
-  }
-
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(error);
-      this.log(`${operation} failed: ${error.message}`);
-      return of(result as T);
-    };
-  }
-
-  private log(message: string) {
-    console.log('EmployeeService: ' + message);
   }
 }

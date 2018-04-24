@@ -2,33 +2,33 @@
     <mat-table #table [dataSource]="dataSource">
         <!-- Position Column -->
         <ng-container matColumnDef="name">
-            <mat-header-cell *matHeaderCellDef> ФИО </mat-header-cell>
-            <mat-cell *matCellDef="let client"> {{client.name}} </mat-cell>
+            <mat-header-cell *matHeaderCellDef>ФИО</mat-header-cell>
+            <mat-cell *matCellDef="let client">{{client.name}}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="sex">
-            <mat-header-cell *matHeaderCellDef> ПОЛ </mat-header-cell>
-            <mat-cell *matCellDef="let client"> {{client.sex}} </mat-cell>
+            <mat-header-cell *matHeaderCellDef>ПОЛ</mat-header-cell>
+            <mat-cell *matCellDef="let client">{{client.sex}}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="phoneNumber">
-            <mat-header-cell *matHeaderCellDef> ТЕЛЕФОН </mat-header-cell>
-            <mat-cell *matCellDef="let client"> {{client.phoneNumber}} </mat-cell>
+            <mat-header-cell *matHeaderCellDef>ТЕЛЕФОН</mat-header-cell>
+            <mat-cell *matCellDef="let client">{{client.phoneNumber}}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="email">
-            <mat-header-cell *matHeaderCellDef> Электронная почта </mat-header-cell>
-            <mat-cell *matCellDef="let client"> {{client.email}} </mat-cell>
+            <mat-header-cell *matHeaderCellDef>Электронная почта</mat-header-cell>
+            <mat-cell *matCellDef="let client">{{client.email}}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="visits">
-            <mat-header-cell *matHeaderCellDef> Посещений </mat-header-cell>
-            <mat-cell *matCellDef="let client"> {{client.visits}} </mat-cell>
+            <mat-header-cell *matHeaderCellDef>Посещений</mat-header-cell>
+            <mat-cell *matCellDef="let client">{{client.visits}}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="discount">
-            <mat-header-cell *matHeaderCellDef> Скидка </mat-header-cell>
-            <mat-cell *matCellDef="let client"> {{client.discount}} </mat-cell>
+            <mat-header-cell *matHeaderCellDef>Скидка</mat-header-cell>
+            <mat-cell *matCellDef="let client">{{client.discount}}</mat-cell>
         </ng-container>
 
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
