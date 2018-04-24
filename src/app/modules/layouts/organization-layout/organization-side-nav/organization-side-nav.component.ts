@@ -11,12 +11,13 @@ import { KeyCodes } from '../../../../constant/key-codes.constants';
 })
 export class OrganizationSideNavComponent {
   readonly menuItems = [
-    new MenuItem('Employees', ['/', States.ORGANIZATION, States.EMPLOYEES], 'person'),
-    new MenuItem('Clients', ['/', States.ORGANIZATION, States.CLIENTS], 'people'),
-    new MenuItem('Overview', ['/', States.ORGANIZATION, States.OVERVIEW], 'view_module'),
-    new MenuItem('Analytics', ['/', States.ORGANIZATION, States.ANALYTICS], 'show_chart'),
-    new MenuItem('Finance', ['/', States.ORGANIZATION, States.FINANCE], 'attach_money'),
-    new MenuItem('Calculation of Salaries', ['/', States.ORGANIZATION, States.CALCULATION_OF_SALARIES], 'credit_card'),
+    new MenuItem('Сотрудники', ['/', States.ORGANIZATION, States.EMPLOYEES], 'person'),
+    new MenuItem('Клиенты', ['/', States.ORGANIZATION, States.CLIENTS], 'people'),
+    new MenuItem('Обзор', ['/', States.ORGANIZATION, States.OVERVIEW], 'view_module'),
+    new MenuItem('Аналитика', ['/', States.ORGANIZATION, States.ANALYTICS], 'show_chart'),
+    new MenuItem('Финансы', ['/', States.ORGANIZATION, States.FINANCE], 'attach_money'),
+    new MenuItem('Расчет зарплат', ['/', States.ORGANIZATION, States.CALCULATION_OF_SALARIES], 'credit_card'),
+    new MenuItem('Складской учет', ['/', States.ORGANIZATION, States.STORAGE], 'storage'),
   ];
 
   constructor(private sideNavService: SideNavService) {
